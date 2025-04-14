@@ -17,12 +17,11 @@ Build predictive models to classify race winners and analyze feature importances
 
 F1-Racing-Analysis
 
-│
-├── Code/
+├── Code
 │   ├── ML Modeling.ipynb           # Preprocessing and binary classification modeling
 │   └── drivers.ipynb              # EDA and driver-level analysis
 │
-├── CSV files/
+├── CSV files
 │   ├── final_data.csv             # Merged and processed data
 │   ├── results.csv                # Raw F1 race results
 │   ├── drivers_org.csv            # Original drivers information
@@ -32,7 +31,7 @@ F1-Racing-Analysis
 │   ├── status.csv                 # Final status of drivers
 │   └── ...                        # Additional supporting files
 │
-├── Visualisations/
+├── Visualisations
 │   ├── Visualization1.html        # EDA HTML output
 │   ├── Visualizations.ipynb       # Visualization notebooks (matplotlib, seaborn)
 │   └── Visulaizations.twb         # Tableau workbook
