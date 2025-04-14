@@ -16,10 +16,10 @@ Build predictive models to classify race winners and analyze feature importances
 ## 📁 Project Structure
 
 - F1-Racing-Analysis/
-  - Code/
+  - **Code/**
     - ML Modeling.ipynb  — Preprocessing and model building
     - drivers.ipynb — Driver analysis and EDA
-  - CSV files/
+  - **CSV files/**
     - circuits.csv  
     - constructor_results.csv  
     - constructor_standings.csv  
@@ -41,7 +41,7 @@ Build predictive models to classify race winners and analyze feature importances
     - seasons.csv  
     - sprint_results.csv  
     - status.csv  
-  - Visualisations/
+  - **Visualisations/**
     - Visualization1.html — EDA output in HTML  
     - Visualization1.ipynb  
     - Visualizations.html  
