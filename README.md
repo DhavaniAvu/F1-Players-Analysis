@@ -1,40 +1,133 @@
-# F1-Players-Analysis
+# 🏁 F1 Racing Data Analysis & Driver Performance Modeling
+## 📌 Overview
+This project explores a comprehensive dataset of Formula 1 racing results, merging data from multiple sources such as lap times, pit stops, driver standings, and constructor information. The goal is to clean and process the data, engineer useful features, and build insightful visualizations and models to understand performance patterns and predict outcomes.
 
-### Project title: Data-Driven Exploration of Formula 1 Race Strategies Using Machine Learning
+## 🎯 Objectives
+Merge and enrich F1 race results with driver, constructor, lap time, and pit stop data
 
-## NOTE 
-Full data cleaning and machine learning models are in the jupyter file: ML modeling.ipynb
-Other visualizations are in the following files: Visualizations.ipynb, Visualization1.ipynb, Visualizations2.ipynb.
-Tableu visualizations are in the tableu workbook: Visualizations.twb
+Clean, preprocess, and engineer features from noisy or inconsistent race data
 
-## Formula 1 Data Analysis
-Project Title: Analysis of Formula 1 Racing Data
+Identify key factors that influence race outcomes and driver success
 
-## About the Project
-This project involves analyzing Formula 1 racing data to gain insights into race performance and driver statistics. The goal is to explore various aspects such as lap times, driver performance, and race outcomes using statistical analysis and machine learning techniques. The analysis includes identifying key performance indicators, predicting race outcomes, and uncovering trends in driver and team performance.
+Visualize performance metrics and correlations among variables
 
-## Research Questions
-How can we predict race outcomes based on historical performance data?
+Build predictive models to classify race winners and analyze feature importances
 
-What factors most significantly affect lap times and race results?
+## 📁 Project Structure
 
-Are there any noticeable trends or patterns in driver performance over the seasons?
+F1-Racing-Analysis/
+│
+├── Code/
+│   ├── ML Modeling.ipynb           # Preprocessing and binary classification modeling
+│   └── drivers.ipynb              # EDA and driver-level analysis
+│
+├── CSV files/
+│   ├── final_data.csv             # Merged and processed data
+│   ├── results.csv                # Raw F1 race results
+│   ├── drivers_org.csv            # Original drivers information
+│   ├── constructors.csv           # Constructor (team) information
+│   ├── lap_times.csv              # Lap time logs per driver per lap
+│   ├── pit_stops.csv              # Pit stop records
+│   ├── status.csv                 # Final status of drivers
+│   └── ...                        # Additional supporting files
+│
+├── Visualisations/
+│   ├── Visualization1.html        # EDA HTML output
+│   ├── Visualizations.ipynb       # Visualization notebooks (matplotlib, seaborn)
+│   └── Visulaizations.twb         # Tableau workbook
+│
+└── README.md                      # Project documentation
 
-How do different teams compare in terms of race performance and consistency?
+## 🧼 Data Cleaning & Feature Engineering
+Dropped redundant columns like duration, positionText, and time from race logs
 
-## Tools and Technologies Used
-Programming Languages: Python, R
-Data Manipulation and Analysis: pandas, numpy
-Data Visualization: matplotlib, seaborn, Tableau
-Machine Learning: sklearn, XGBoost
-Statistical Analysis: scipy, statsmodels
+Renamed key columns for clarity (e.g., lap → lap_laptimes, milliseconds → lap_duration)
 
-## Analysis and Techniques
-The analysis employed various statistical and machine learning techniques:
-Linear Regression: Used to predict race outcomes and lap times.
-Logistic Regression: Applied to classify race results (e.g., win/loss).
-Decision Trees and Random Forests: Identified important features affecting race performance.
-Clustering: Grouped races or drivers based on performance metrics.
+Converted fastestLapTime from string (mm:ss) to milliseconds
 
-## Outcomes and Insights
-The analysis provided valuable insights into race performance, including factors affecting lap times and race outcomes. Key drivers and teams were identified based on their performance trends, and predictive models successfully forecasted race results. These insights can help teams and drivers optimize their strategies and improve their performance in future races.
+Replaced all missing values represented as \N with NaN and handled them
+
+Converted categorical race outcomes into binary classification labels
+
+Merged race results with:
+
+Driver names (driverRef)
+
+Team names (constructors)
+
+Pit stop and lap time durations
+
+Status logs
+
+## 📊 Exploratory Data Analysis (EDA)
+Merged driver standings and personal data for deep dive analysis
+
+Analyzed:
+
+Win count distribution by race position
+
+Points scored per driver across seasons
+
+Driver consistency and average performance
+
+Used correlation matrices to study numeric feature interactions
+
+Visualized:
+
+Wins vs Position (line chart)
+
+Heatmaps for feature relationships
+
+Missing data & anomalies
+
+## 🤖 Machine Learning Workflow
+Performed binary classification:
+
+Target: Whether the driver won the race (1) or not (0)
+
+Techniques used:
+
+Label encoding
+
+Handling missing values
+
+Train/test split
+
+Model training (RandomForestClassifier)
+
+Feature importance analysis
+
+## 📈 Visualizations
+Interactive dashboards in Tableau (Visulaizations.twb)
+
+HTML & Notebook-based plots using:
+
+Matplotlib
+
+Seaborn
+
+KPIs visualized include:
+
+Driver race count
+
+Win % by constructor
+
+Lap & pit stop patterns
+
+## 🧪 Tools & Technologies
+Languages: Python (Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn)
+
+Visualization: Tableau, HTML, Power BI (if applicable)
+
+Data Storage: CSVs
+
+ML Libraries: Scikit-learn (for classification modeling)
+
+## 📌 Key Takeaways
+Integrated raw, messy data from multiple CSVs into a clean, unified dataset
+
+Uncovered key performance indicators for F1 drivers and constructors
+
+Modeled winning prediction with engineered race features
+
+Delivered interactive dashboards and insightful statistical graphics
