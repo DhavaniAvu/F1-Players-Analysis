@@ -15,7 +15,8 @@ Build predictive models to classify race winners and analyze feature importances
 
 ## 📁 Project Structure
 
-F1-Racing-Analysis/
+F1-Racing-Analysis
+
 │
 ├── Code/
 │   ├── ML Modeling.ipynb           # Preprocessing and binary classification modeling
