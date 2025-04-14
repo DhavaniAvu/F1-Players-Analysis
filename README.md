@@ -17,29 +17,45 @@ Build predictive models to classify race winners and analyze feature importances
 
 F1-Racing-Analysis
 
-├── Code
-│   ── ML Modeling.ipynb           # Preprocessing and binary classification modeling
-│   ── drivers.ipynb              # EDA and driver-level analysis
+F1-Racing-Analysis/
 │
-├── CSV files
-│   ── final_data.csv             # Merged and processed data
-│   ── results.csv                # Raw F1 race results
-│   ── drivers_org.csv            # Original drivers information
-│   ── constructors.csv           # Constructor (team) information
-│   ── lap_times.csv              # Lap time logs per driver per lap
-│   ── pit_stops.csv              # Pit stop records
-│   ── status.csv                 # Final status of drivers
-│   ── ...                        # Additional supporting files
+├── Code/
+│   ├── ML Modeling.ipynb              # Preprocessing and model building
+│   ├── drivers.ipynb                  # Driver analysis and EDA
 │
-├── Visualisations
-│   ── Visualization1.html        # EDA HTML output
-│   ── Visualizations.ipynb       # Visualization notebooks (matplotlib, seaborn)
-│   ── Visulaizations.twb         # Tableau workbook
+├── CSV files/
+│   ├── circuits.csv
+│   ├── constructor_results.csv
+│   ├── constructor_standings.csv
+│   ├── constructors.csv
+│   ├── driver.csv
+│   ├── driver_standings_org.csv
+│   ├── drivers_org.csv
+│   ├── drivers_standingss.csv
+│   ├── final_data.csv
+│   ├── final_drivers.csv
+│   ├── lap_times.csv
+│   ├── lap_times_org.csv
+│   ├── pit_stops.csv
+│   ├── pit_stops_org.csv
+│   ├── qualifying.csv
+│   ├── races.csv
+│   ├── results.csv
+│   ├── results_with_names.csv
+│   ├── seasons.csv
+│   ├── sprint_results.csv
+│   ├── status.csv
 │
-└── README.md                      # Project documentation
+├── Visualisations/
+│   ├── Visualization1.html            # EDA output in HTML
+│   ├── Visualization1.ipynb           # Corresponding notebook
+│   ├── Visualizations.html
+│   ├── Visualizations.ipynb
+│   ├── Visualizations2.ipynb
+│   ├── Visulaizations.twb             # Tableau workbook
+│
+└── README.md                          # Project documentation
 
-
----
 
 ## 🧼 Data Cleaning & Feature Engineering
 - Dropped redundant columns like `duration`, `positionText`, and `time` from race logs  
